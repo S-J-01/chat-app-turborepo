@@ -1,15 +1,18 @@
 interface PropTypes {
-    placeholder:string
+    placeholder:string,
+    size:string
 }
 
 export function InputBox({
-    placeholder }:PropTypes){
+    placeholder,
+    size
+    }:PropTypes){
         return(
             <input placeholder={placeholder} style={{
                 borderWidth:1,
                 borderColor:"black",
-                margin:5,
-                padding:5
+                margin:size==='big'?10:5,
+                padding:size==='big'?10:5
             }}></input>
         )
     }
